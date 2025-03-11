@@ -43,35 +43,30 @@ By leveraging the right database technologies for each service, we ensure both *
 
 ---
 
-## **Blockchain Integration: Reinventing Transparency, Not Cryptocurrency**
+## **Distributed Storage and Transparency**
 
-Our blockchain implementation is not focused on creating a cryptocurrency but rather on **ensuring transparency and decentralization** of platform records.
 
 ### **Implementation Plan**
-1. **Blockchain for Record-Keeping**
+1. **Storage Network for Record-Keeping**
     - Every **user action** (e.g., transactions, reviews) is signed cryptographically and stored on the blockchain.
     - This ensures **tamper-proof** records, eliminating fake reviews and bot-generated content.
 
-2. **User Account on Blockchain**
+2. **User Account on Storage Network**
     - Upon signing up, users receive both:
         - A **platform account** (for platform operations).
         - A **blockchain account** (containing their **public** and **private keys**).
     - Actions on the platform are **digitally signed** using the user's private key, ensuring authenticity.
 
 3. **Data Integrity & Storage**
-    - Each transaction is **hashed using SHA-256** and **broadcasted across blockchain nodes**.
+    - Each transaction is **hashed using SHA-256** and **broadcasted across the nodes**.
     - Every node maintains a ledger of transactions in the format:
       ```json
       {
         "PublicKey": ["Transaction One", "Transaction Two"]
       }
       ```
-    - **LevelDB** is used as the underlying storage mechanism for blockchain data.
+    - **LevelDB** is used as the underlying storage mechanism for Network data.
 
 4. **Testing & Deployment Considerations**
-    - In real-world scenarios, blockchain nodes must be hosted on separate machines and communicate via **HTTP or gRPC**.
-    - For testing purposes, we plan to **host multiple blockchain nodes on different ports using Docker**, simulating a distributed network.
-
-This Chain Idea is presented by **Swan Htet Aung Phyo** who wrote this as the prototype in go . We have not agreed it yet .
-
-We can make this kind of idea by delopying the Smart contract on the chain . However, we have no one know how to write solidity and rust
+    - In real-world scenarios,nodes must be hosted on separate machines and communicate via **HTTP or gRPC**.
+    - For testing purposes, we plan to **host multiple  nodes on different ports using Docker**, simulating a distributed network.
