@@ -1,3 +1,1 @@
-
-
-![Video Title](https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-hero-goto)
+<iframe src="https://drive.google.com/file/d/1ABCD12345xyz/preview" width="640" height="360"></iframe>
