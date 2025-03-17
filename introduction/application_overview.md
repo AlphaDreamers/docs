@@ -37,6 +37,9 @@ Whether you're a freelancer looking to offer your expertise or a digital creator
     - Buyers and sellers can communicate directly through a **real-time chat feature**.
     - This enhances collaboration and allows users to discuss project details efficiently.
 
+8. **Check the Authenticity of the review on the Chain**
+   - Before making the purchasing and choosing the  service, user can copy the transaction ID of the review and services History on the chain Scanner
+
 ---
 
 ### **Blockchain Integration for Trust & Transparency**
