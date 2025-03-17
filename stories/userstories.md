@@ -1,22 +1,38 @@
 # Peer-to-Peer Marketplace - Agile User Stories
 
-## 1. User Registration & KYC Verification
-
-| **ID**                  | US-001                                                                                                                                                                                  |
-| ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Title**               | User Account Setup and Verification                                                                                                                                                     |
-| **As a**                | New user                                                                                                                                                                                |
-| **I want**              | To register and complete KYC verification                                                                                                                                               |
-| **So that**             | I can securely participate in the marketplace                                                                                                                                           |
-| **Acceptance Criteria** | - Users can sign up with an email and password.<br>- KYC verification requires identity proof submission.<br>- The system verifies and approves accounts before doing the transactions. |
-| **Priority**            | High                                                                                                                                                                                    |
-| **Story Points**        | 5                                                                                                                                                                                       |
 
 ---
 
-## 2. Listing Digital Assets & Services
+## 1. User Registration
 
-| **ID**                  | US-002                                                                                                                                                         |
+| **ID**                  | US-001                                                                                                                                                                      |
+| ----------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Title**               | User Account Setup                                                                                                                                                          |
+| **As a**                | New user                                                                                                                                                                     |
+| **I want**              | To register with an email and password                                                                                                                                       |
+| **So that**             | I can create an account on the platform                                                                                                                                      |
+| **Acceptance Criteria** | - Users can sign up with an email and password.<br>- The system verifies and approves the registration.                                                                      |
+| **Priority**            | High                                                                                                                                                                         |
+| **Story Points**        | 3                                                                                                                                                                            |
+
+---
+
+## 2. KYC Verification
+
+| **ID**                  | US-002                                                                                                                                                                      |
+| ----------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Title**               | KYC Verification                                                                                                                                                             |
+| **As a**                | Registered user                                                                                                                                                              |
+| **I want**              | To complete KYC verification by submitting identity proof                                                                                                                    |
+| **So that**             | I can securely participate in the marketplace                                                                                                                                |
+| **Acceptance Criteria** | - KYC verification requires identity proof submission.<br>- The system verifies and approves accounts before allowing transactions.                                           |
+| **Priority**            | High                                                                                                                                                                         |
+| **Story Points**        | 2                                                                                                                                                                            |
+
+
+## 3. Listing Digital Assets & Services
+
+| **ID**                  | US-003                                                                                                                                                         |
 | ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Title**               | Sell Digital Assets and Services                                                                                                                               |
 | **As a**                | Seller                                                                                                                                                         |
@@ -28,9 +44,9 @@
 
 ---
 
-## 3. User Profile Management
+## 4. User Profile Management
 
-| **ID**                  | US-003                                                                                                                         |
+| **ID**                  | US-004                                                                                                                         |
 | ----------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
 | **Title**               | Manage Your Profile                                                                                                            |
 | **As a**                | User                                                                                                                           |
@@ -42,9 +58,9 @@
 
 ---
 
-## 4 . Searching and Filtering Listings
+## 5 . Searching and Filtering Listings
 
-| **ID**                  | US-003                                                                                                                                                                 |
+| **ID**                  | US-005                                                                                                                                                                 |
 | ----------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Title**               | Discover Services and Assets                                                                                                                                           |
 | **As a**                | Buyer                                                                                                                                                                  |
@@ -56,9 +72,9 @@
 
 ---
 
-## 5. Secure Payment Processing
+## 6. Secure Payment Processing
 
-| **ID**                  | US-004                                                                                                                 |
+| **ID**                  | US-006                                                                                                                 |
 | ----------------------- | ---------------------------------------------------------------------------------------------------------------------- |
 | **Title**               | Payment Processing                                                                                                     |
 | **As a**                | Buyer                                                                                                                  |
@@ -70,9 +86,9 @@
 
 ---
 
-## 6. Order Completion & Delivery
+## 7. Order Completion & Delivery
 
-| **ID**                  | US-005                                                                                                                                                                                      |
+| **ID**                  | US-007                                                                                                                                                                                      |
 | ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Title**               | Order Delivery System                                                                                                                                                                       |
 | **As a**                | Seller                                                                                                                                                                                      |
@@ -84,9 +100,9 @@
 
 ---
 
-## 7. Reviews & Ratings
+## 8. Reviews & Ratings
 
-| **ID**                  | US-006                                                                                                                                                              |
+| **ID**                  | US-008                                                                                                                                                              |
 | ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Title**               | Trust-Based Review System                                                                                                                                           |
 | **As a**                | User                                                                                                                                                                |
@@ -98,9 +114,9 @@
 
 ---
 
-## 8. Accessibility Support
+## 9. Accessibility Support
 
-| **ID**                  | US-007                                                                                                                                                                                                          |
+| **ID**                  | US-009                                                                                                                                                                                                          |
 | ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Title**               | Accessibility Support                                                                                                                                                                                           |
 | **As a**                | User with disabilities                                                                                                                                                                                          |
@@ -112,9 +128,9 @@
 
 ---
 
-## 9. Responsive Design
+## 10. Responsive Design
 
-| **ID**                  | US-009                                                                                                                                                                                                                |
+| **ID**                  | US-010                                                                                                                                                                                                                |
 | ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Title**               | Mobile-Responsive Interface Support                                                                                                                                                                                   |
 | **As a**                | Mobile user                                                                                                                                                                                                           |
@@ -126,9 +142,9 @@
 
 ---
 
-## 10. Language Preferences
+## 11. Language Preferences
 
-| **ID**                  | US-009                                                                                                                                                                                                      |
+| **ID**                  | US-011                                                                                                                                                                                                      |
 | ----------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Title**               | Language Preferences                                                                                                                                                                                        |
 | **As a**                | International user                                                                                                                                                                                          |
@@ -140,9 +156,9 @@
 
 ---
 
-## 11. Dark Mode Theme
+## 12. Dark Mode Theme
 
-| **ID**                  | US-010                                                                                                                                                                                                    |
+| **ID**                  | US-012                                                                                                                                                                                                    |
 | ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Title**               | Dark Mode Theme                                                                                                                                                                                           |
 | **As a**                | User                                                                                                                                                                                                      |
@@ -154,9 +170,9 @@
 
 ---
 
-## 12. Service Preview
+## 13. Service Preview
 
-| **ID**                  | US-011                                                                                                                                                                                                                |
+| **ID**                  | US-013                                                                                                                                                                                                                |
 | ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Title**               | Service Preview                                                                                                                                                                                                       |
 | **As a**                | Buyer                                                                                                                                                                                                                 |
@@ -168,9 +184,9 @@
 
 ---
 
-## 13. Notification Settings
+## 14. Notification Settings
 
-| **ID**                  | US-012                                                                                                                                                                                                                   |
+| **ID**                  | US-014                                                                                                                                                                                                                   |
 | ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | **Title**               | Notification Settings                                                                                                                                                                                                    |
 | **As a**                | User                                                                                                                                                                                                                     |
@@ -182,9 +198,9 @@
 
 ---
 
-## 14. In-app Messaging
+## 15. In-app Messaging
 
-| **ID**                  | US-013                                                                                                                                                                                  |
+| **ID**                  | US-015                                                                                                                                                                                  |
 | ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Title**               | In-app Messaging                                                                                                                                                                        |
 | **As a**                | User                                                                                                                                                                                    |
@@ -196,9 +212,9 @@
 
 ---
 
-## 15. Crypto Wallet Connection
+## 16. Crypto Wallet Connection
 
-| **ID**                  | US-014                                                                                                                                                                                                               |
+| **ID**                  | US-016                                                                                                                                                                                                               |
 | ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Title**               | Crypto Wallet Connection                                                                                                                                                                                             |
 | **As a**                | User                                                                                                                                                                                                                 |
@@ -210,9 +226,9 @@
 
 ---
 
-## 16. Platform Onboarding
+## 17. Platform Onboarding
 
-| **ID**                  | US-015                                                                                                                                                                         |
+| **ID**                  | US-017                                                                                                                                                                         |
 | ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | **Title**               | Platform Onboarding                                                                                                                                                            |
 | **As a**                | New user                                                                                                                                                                       |
@@ -224,9 +240,9 @@
 
 ---
 
-## 17. Compare Services
+## 18. Compare Services
 
-| **ID**                  | US-016                                                                                                                                                                            |
+| **ID**                  | US-018                                                                                                                                                                            |
 | ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Title**               | Compare Services                                                                                                                                                                  |
 | **As a**                | Buyer                                                                                                                                                                             |
@@ -238,9 +254,9 @@
 
 ---
 
-## 18. Personalized Dashboard
+## 19. Personalized Dashboard
 
-| **ID**                  | US-017                                                                                                                                                                                   |
+| **ID**                  | US-019                                                                                                                                                                                   |
 | ----------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Title**               | Personalized Dashboard                                                                                                                                                                   |
 | **As a**                | User                                                                                                                                                                                     |
@@ -252,9 +268,9 @@
 
 ---
 
-## 19. Portfolio Display
+## 20. Portfolio Display
 
-| **ID**                  | US-018                                                                                                                                                                                                |
+| **ID**                  | US-020                                                                                                                                                                                                |
 | ----------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Title**               | Portfolio Display                                                                                                                                                                                     |
 | **As a**                | Seller                                                                                                                                                                                                |
@@ -263,5 +279,105 @@
 | **Acceptance Criteria** | - Dedicated portfolio section on seller profile.<br>- Customizable layout and organization.<br>- Support for various media types (images, videos, documents).<br>- Option to highlight featured work. |
 | **Priority**            | Medium                                                                                                                                                                                                |
 | **Story Points**        | 3                                                                                                                                                                                                     |
+
+---
+## **21. Report of the User (Both Seller and Buyer Activities Statement)**
+
+| **ID**                  | US-021                                                                                                                                                        |
+| ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Title**               | User Activity Report                                                                                                                                           |
+| **As a**                | Platform User (Seller or Buyer)                                                                                                                                |
+| **I want**              | To generate a report of my activities, including transactions and interactions                                                                                |
+| **So that**             | I can review my past activities, track performance, and manage my business effectively                                                                        |
+| **Acceptance Criteria** | - Ability to view a detailed report of transactions and interactions.<br>- Filter options by date range and activity type.<br>- Export report as PDF or CSV. |
+| **Priority**            | High                                                                                                                                                           |
+| **Story Points**        | 5                                                                                                                                                              |  
+
+---
+## **22. Copy Transaction ID and Check on Block Scanner**
+
+| **ID**                  | US-022                                                                                                                                    |
+| ----------------------- |-------------------------------------------------------------------------------------------------------------------------------------------|
+| **Title**               | Copy Transaction ID and Check on Block Scanner                                                                                            |
+| **As a**                | Platform User (Seller or Buyer)                                                                                                           |
+| **I want**              | To copy my transaction ID and check its status on a blockchain explorer                                                                   |
+| **So that**             | I can verify the transaction details and ensure it has been processed successfully                                                        |
+| **Acceptance Criteria** | - Display transaction ID in order details.<br>- "Copy" button for easy copying.<br>- Direct link to a block explorer (Our Own BlockChain) |
+| **Priority**            | High                                                                                                                                      |
+| **Story Points**        | 3                                                                                                                                         |
+
+---
+
+## **23. User Manual**
+
+| **ID**                  | US-023                                                                                                              |
+| ----------------------- | ------------------------------------------------------------------------------------------------------------------ |
+| **Title**               | User Manual                                                                                                        |
+| **As a**                | Platform User (Seller or Buyer)                                                                                   |
+| **I want**              | A comprehensive user manual that guides me on how to use the application effectively                             |
+| **So that**             | I can easily navigate and utilize all features without confusion                                                  |
+| **Acceptance Criteria** | - Step-by-step instructions with screenshots.<br>- Covers key features (registration, transactions, messaging, etc.).<br>- Available in multiple formats (PDF, web, in-app help).<br>- Searchable FAQ section. |
+| **Priority**            | Medium                                                                                                            |
+| **Story Points**        | 4                                                                                                                 |
+
+---
+
+### **24. Customer Support (Automated, Rule-Based)**
+
+| **ID**                  | US-024                                                                                                                             |
+| ----------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| **Title**               | Automated Customer Support                                                                                                        |
+| **As a**                | User (Seller or Buyer)                                                                                                            |
+| **I want**              | To get instant assistance through an automated support system without human intervention                                         |
+| **So that**             | I can quickly resolve my queries based on predefined responses and decision trees                                                |
+| **Acceptance Criteria** | - No human agents involved.<br>- Responses based on a predefined decision tree.<br>- Supports common queries like orders, payments, shipping.<br>- Available 24/7.<br>- Option to provide feedback if the response was helpful. |
+| **Priority**            | High                                                                                                                              |
+| **Story Points**        | 5                                                                                                                                 |
+
+---
+
+### **Sorted User Stories by Story Points**
+
+#### **Story Points 5**
+1. **US-004**: Secure Payment Processing
+2. **US-007**: Accessibility Support
+3. **US-014**: Crypto Wallet Connection
+4. **US-021**: User Activity Report
+5. **US-024**: Automated Customer Support
+
+#### **Story Points 4**
+6. **US-002**: Listing Digital Assets & Services
+7. **US-005**: Order Completion & Delivery
+8. **US-009**: Responsive Design
+9. **US-009**: Language Preferences
+10. **US-013**: In-app Messaging
+11. **US-017**: Personalized Dashboard
+12. **US-023**: User Manual
+
+#### **Story Points 3**
+13. **US-001**: User Registration
+14. **US-003**: User Profile Management
+15. **US-003**: Searching and Filtering Listings
+16. **US-006**: Reviews & Ratings
+17. **US-010**: Dark Mode Theme
+18. **US-011**: Service Preview
+19. **US-015**: Platform Onboarding
+20. **US-016**: Compare Services
+21. **US-018**: Portfolio Display
+22. **US-022**: Copy Transaction ID
+
+#### **Story Points 2**
+23. **US-002**: KYC Verification
+24. **US-012**: Notification Settings
+
+---
+
+### **Total Story Points**
+- **5 points**: 5 stories × 5 = **25**
+- **4 points**: 7 stories × 4 = **28**
+- **3 points**: 10 stories × 3 = **30**
+- **2 points**: 2 stories × 2 = **4**
+
+**Grand Total**:  **87** story points.
 
 ---
