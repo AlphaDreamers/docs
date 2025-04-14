@@ -354,115 +354,216 @@ By leveraging blockchain, the platform guarantees **trust, security, and authent
 | **Story Points**        | 5                                                                                                                                                                                                     |
 
 ---
+## 17. Platform Onboarding  
+**ID:** US-017  
+**Title:** Platform Onboarding  
+**As a:** New user  
+**I want:** Interactive tutorials explaining platform usage  
+**So that:** I can quickly learn navigation and features  
 
-## 17. Platform Onboarding
+*Acceptance Criteria:*  
+1. *Given* a new user completes registration  
+   *When* they first access the dashboard  
+   *Then* an interactive walkthrough starts automatically with 5 sequential steps (60s each) highlighting core features, using tooltips with ≤500ms fade-in animation  
 
-| **ID**                  | US-017                                                                                                                                                                         |
-| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **Title**               | Platform Onboarding                                                                                                                                                            |
-| **As a**                | New user                                                                                                                                                                       |
-| **I want**              | To see interactive tutorials explaining how to use the platform                                                                                                                |
-| **So that**             | I can quickly learn how to navigate and use all features                                                                                                                       |
-| **Acceptance Criteria** | - First-time user walkthrough.<br>- Context-sensitive help tooltips.<br>- Dismissible and resumable tutorials.<br>- Video tutorials for complex features like crypto payments. |
-| **Priority**            | Low                                                                                                                                                                            |
-| **Story Points**        | 3                                                                                                                                                                              |
+2. *Given* a user hovers over any UI element marked with (?)  
+   *When* they maintain hover for 1.5 seconds  
+   *Then* a contextual tooltip appears with 300-word max explanation, loaded from client-side cache (TTL: 24h)  
 
----
+3. *Given* a user starts then dismisses a tutorial  
+   *When* they access any feature page  
+   *Then* a non-intrusive resume button (24×24px) appears in the top-right corner, persisting progress for 30 days via localStorage  
 
-## 18. Compare Services
+4. *Given* a user attempts a crypto payment  
+   *When* they reach the confirmation screen  
+   *Then* a 90s video tutorial overlay plays automatically (720p, 2.5MB max) with closed captions and adjustable playback speed (0.5x-2x)  
 
-| **ID**                  | US-018                                                                                                                                                                            |
-| ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Title**               | Compare Services                                                                                                                                                                  |
-| **As a**                | Buyer                                                                                                                                                                             |
-| **I want**              | To compare multiple services side by side                                                                                                                                         |
-| **So that**             | I can make an informed decision on which to purchase                                                                                                                              |
-| **Acceptance Criteria** | - Select up to 4 services for comparison.<br>- Visual comparison of key features and pricing.<br>- Highlight differences between services.<br>- Save comparison for later review. |
-| **Priority**            | Medium                                                                                                                                                                            |
-| **Story Points**        | 3                                                                                                                                                                                 |
-
----
-
-## 19. Personalized Dashboard
-
-| **ID**                  | US-019                                                                                                                                                                                   |
-| ----------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Title**               | Personalized Dashboard                                                                                                                                                                   |
-| **As a**                | User                                                                                                                                                                                     |
-| **I want**              | To see a dashboard with my recent activity and personalized recommendations                                                                                                              |
-| **So that**             | I can quickly access relevant information and services                                                                                                                                   |
-| **Acceptance Criteria** | - Overview of active orders and earnings.<br>- Quick access to favorite services and sellers.<br>- Personalized service recommendations.<br>- Crypto market trends and conversion rates. |
-| **Priority**            | Medium                                                                                                                                                                                   |
-| **Story Points**        | 4                                                                                                                                                                                        |
+*Priority:* Low  
+*Story Points:* 3  
 
 ---
 
-## 20. Portfolio Display
+## 18. Compare Services  
+**ID:** US-018  
+**Title:** Compare Services  
+**As a:** Buyer  
+**I want:** Side-by-side service comparisons  
+**So that:** I can make informed purchase decisions  
 
-| **ID**                  | US-020                                                                                                                                                                                                |
-| ----------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Title**               | Portfolio Display                                                                                                                                                                                     |
-| **As a**                | Seller                                                                                                                                                                                                |
-| **I want**              | To showcase my previous work in a visually appealing portfolio                                                                                                                                        |
-| **So that**             | Potential buyers can see examples of my skills and quality                                                                                                                                            |
-| **Acceptance Criteria** | - Dedicated portfolio section on seller profile.<br>- Customizable layout and organization.<br>- Support for various media types (images, videos, documents).<br>- Option to highlight featured work. |
-| **Priority**            | Medium                                                                                                                                                                                                |
-| **Story Points**        | 3                                                                                                                                                                                                     |
+*Acceptance Criteria:*  
+1. *Given* a user selects services for comparison  
+   *When* they check >4 items  
+   *Then* the UI displays error toast "Maximum 4 services" and auto-unchecks the last selection, with haptic feedback on mobile  
 
----
-## **21. Report of the User (Both Seller and Buyer Activities Statement)**
+2. *Given* 2-4 services are selected  
+   *When* the user clicks "Compare"  
+   *Then* a 3-column grid loads within 2s, displaying: Pricing (converted to user's currency), Delivery Time (hours), and 5-star Ratings (with 0.1 increments)  
 
-| **ID**                  | US-021                                                                                                                                                        |
-| ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Title**               | User Activity Report                                                                                                                                           |
-| **As a**                | Platform User (Seller or Buyer)                                                                                                                                |
-| **I want**              | To generate a report of my activities, including transactions and interactions                                                                                |
-| **So that**             | I can review my past activities, track performance, and manage my business effectively                                                                        |
-| **Acceptance Criteria** | - Ability to view a detailed report of transactions and interactions.<br>- Filter options by date range and activity type.<br>- Export report as PDF or CSV. |
-| **Priority**            | High                                                                                                                                                           |
-| **Story Points**        | 5                                                                                                                                                              |  
+3. *Given* services are compared  
+   *When* key differences exist  
+   *Then* cells with >20% variance from average highlight in #FFEBEE (desktop) or show ★ (mobile), verified through nightly price benchmarking jobs  
 
----
-## **22. Copy Transaction ID and Check on Block Scanner**
+4. *Given* a comparison is active  
+   *When* the user clicks "Save"  
+   *Then* a PDF/CSV generates server-side (max 500ms latency) containing all comparison data, triggering download with "comparison_[timestamp].pdf" naming  
 
-| **ID**                  | US-022                                                                                                                                    |
-| ----------------------- |-------------------------------------------------------------------------------------------------------------------------------------------|
-| **Title**               | Copy Transaction ID and Check on Block Scanner                                                                                            |
-| **As a**                | Platform User (Seller or Buyer)                                                                                                           |
-| **I want**              | To copy my transaction ID and check its status on a blockchain explorer                                                                   |
-| **So that**             | I can verify the transaction details and ensure it has been processed successfully                                                        |
-| **Acceptance Criteria** | - Display transaction ID in order details.<br>- "Copy" button for easy copying.<br>- Direct link to a block explorer (Our Own BlockChain) |
-| **Priority**            | High                                                                                                                                      |
-| **Story Points**        | 3                                                                                                                                         |
+*Priority:* Medium  
+*Story Points:* 3  
 
 ---
 
-## **23. User Manual**
+## 19. Personalized Dashboard  
+**ID:** US-019  
+**Title:** Personalized Dashboard  
+**As a:** User  
+**I want:** Custom activity/recommendations dashboard  
+**So that:** I access relevant information quickly  
 
-| **ID**                  | US-023                                                                                                              |
-| ----------------------- | ------------------------------------------------------------------------------------------------------------------ |
-| **Title**               | User Manual                                                                                                        |
-| **As a**                | Platform User (Seller or Buyer)                                                                                   |
-| **I want**              | A comprehensive user manual that guides me on how to use the application effectively                             |
-| **So that**             | I can easily navigate and utilize all features without confusion                                                  |
-| **Acceptance Criteria** | - Step-by-step instructions with screenshots.<br>- Covers key features (registration, transactions, messaging, etc.).<br>- Available in multiple formats (PDF, web, in-app help).<br>- Searchable FAQ section. |
-| **Priority**            | Medium                                                                                                            |
-| **Story Points**        | 4                                                                                                                 |
+*Acceptance Criteria:*  
+1. *Given* a user opens the dashboard  
+   *When* the API responds within 1.2s  
+   *Then* they see:  
+   - Active orders (status badges updated via WebSocket every 15s)  
+   - Top 3 recommendations (ML model v2.3+)  
+   - Real-time crypto rates (15m refresh, ±0.5% accuracy)  
+
+2. *Given* recommended services  
+   *When* a user clicks "Not Relevant"  
+   *Then* the item fades out (400ms) and replacement slides in from cache, while a PATCH request updates the recommendation model  
+
+3. *Given* the crypto rates widget  
+   *When* market data is unavailable  
+   *Then* displays last-known values with ⚠️ icon and "Data delayed" tooltip, queuing background refresh every 2m  
+
+*Priority:* Medium  
+*Story Points:* 4  
 
 ---
 
-### **24. Customer Support (Automated, Rule-Based)**
+## 20. Portfolio Display  
+**ID:** US-020  
+**Title:** Portfolio Display  
+**As a:** Seller  
+**I want:** Visually appealing work portfolio  
+**So that:** Buyers see my capabilities  
 
-| **ID**                  | US-024                                                                                                                             |
-| ----------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| **Title**               | Automated Customer Support                                                                                                        |
-| **As a**                | User (Seller or Buyer)                                                                                                            |
-| **I want**              | To get instant assistance through an automated support system without human intervention                                         |
-| **So that**             | I can quickly resolve my queries based on predefined responses and decision trees                                                |
-| **Acceptance Criteria** | - No human agents involved.<br>- Responses based on a predefined decision tree.<br>- Supports common queries like orders, payments, shipping.<br>- Available 24/7.<br>- Option to provide feedback if the response was helpful. |
-| **Priority**            | High                                                                                                                              |
-| **Story Points**        | 5                                                                                                                                 |
+*Acceptance Criteria:*  
+1. *Given* a seller edits their portfolio  
+   *When* uploading media  
+   *Then* accepts:  
+   - Images: WebP/AVIF ≤5MB (auto-compressed to 1920px width)  
+   - Videos: MP4 ≤30s (H.264, 720p)  
+   - Docs: PDF ≤10MB (text extraction for search)  
 
+2. *Given* portfolio items are added  
+   *When* arranging layout  
+   *Then* uses React-Grid-Layout with persisting positions via PATCH /portfolio_layout (JWT-validated)  
+
+3. *Given* a buyer views a portfolio  
+   *When* clicking featured work  
+   *Then* opens lightbox with EXIF metadata (for images) or SHA-256 file hash verification badge  
+
+*Priority:* Medium  
+*Story Points:* 3  
+
+---
+
+## 21. User Activity Report  
+**ID:** US-021  
+**Title:** User Activity Report  
+**As a:** User  
+**I want:** Activity reports  
+**So that:** I can review transactions/performance  
+
+*Acceptance Criteria:*  
+1. *Given* report generation  
+   *When* selecting date range  
+   *Then* validates start ≤ end (client-side) and ≤365 days (server-side), with error: "Maximum 1 year range"  
+
+2. *Given* CSV export requested  
+   *When* data exceeds 10k rows  
+   *Then* queues background job, emails download link (expiring in 24h) with AES-256 encryption  
+
+3. *Given* PDF generation  
+   *Then* includes watermark with user ID and timestamp, verified through QR code in footer  
+
+*Priority:* High  
+*Story Points:* 5  
+
+---
+
+## 22. Transaction ID Verification  
+**ID:** US-022  
+**Title:** Transaction ID Verification  
+**As a:** User  
+**I want:** Verify transactions on blockchain  
+**So that:** I confirm payment status  
+
+*Acceptance Criteria:*  
+1. *Given* a transaction exists  
+   *When* viewing details  
+   *Then* displays TX ID (first/last 4 chars masked) with "Copy" button using navigator.clipboard.writeText()  
+
+2. *Given* TX ID is copied  
+   *When* successful  
+   *Then* shows green checkmark for 3s and vibrates (mobile)  
+
+3. *Given* "View on Explorer" clicked  
+   *Then* opens new tab to https://explorer.scala.org/tx/${id} with Referer header validation  
+
+*Priority:* High  
+*Story Points:* 3  
+
+---
+
+## 23. User Manual  
+**ID:** US-023  
+**Title:** User Manual  
+**As a:** User  
+**I want:** Comprehensive usage guide  
+**So that:** I navigate without confusion  
+
+*Acceptance Criteria:*  
+1. *Given* manual access  
+   *When* opened in-app  
+   *Then* displays searchable React-based doc with:  
+   - 50+ annotated screenshots (WebP format)  
+   - Video embeds (Lite-Youtube-Embed)  
+   - Interactive feature simulator  
+
+2. *Given* PDF download  
+   *Then* generates via puppeteer with TOC (≤5MB), including last-updated date in footer  
+
+3. *Given* outdated manual  
+   *When* version < current  
+   *Then* shows "Update Available" banner, force-refreshes content after 7 days  
+
+*Priority:* Medium  
+*Story Points:* 4  
+
+---
+
+## 24. Automated Support  
+**ID:** US-024  
+**Title:** Automated Customer Support  
+**As a:** User  
+**I want:** Instant rule-based assistance  
+**So that:** I resolve issues quickly  
+
+*Acceptance Criteria:*  
+1. *Given* support chat opened  
+   *When* user types message  
+   *Then* responds within 800ms using decision-tree v3.1, logging interaction in encrypted Firestore  
+
+2. *Given* unrecognized query  
+   *When* 3+ failed matches  
+   *Then* escalates to "Contact Us" form pre-filled with chat history (base64 encoded)  
+
+3. *Given* feedback submitted  
+   *Then* updates response accuracy score (0-100) and retrains model weekly if score <85  
+
+*Priority:* High  
+*Story Points:* 5  
 ---
 
 ### **Sorted User Stories by Story Points**
